@@ -2,10 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
-
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap
 
@@ -29,12 +26,15 @@
 
 html, body {
     height: 100%;
+    width: 100%;
     
  }
 
 #bootstrap-overrides {
-    background-color: #ffffff;
+    /*background-color: #ffffff;
     background-color: white;
+    */
+    background-color: rgb(133,134,176);
     /*background-color: #dcd0c0;
     /*background-color: rgb(223,231,242); */
 }
@@ -51,8 +51,11 @@ html, body {
 
 .jumbotron.jumbotron-fluid {
     background-image: url("Images/bright_roses.jpg");
-    background-size: 1680px;
-    background-position: center center;
+    background-size: cover;
+    /* background-position: center center; */
+    background: contain;
+    width: 100%;
+    height: 900px;
     padding-top: 20em;
     padding-bottom: 20em;
 }
@@ -60,58 +63,132 @@ html, body {
 .display-3 {
     color: #27131d;
     font-family: 'Sophia', serif;
-    font-size: 150px;
+    font-size: 180px;
     padding-bottom: -15px;
+    font-weight: 500;
     
 }
 
 .lead { 
     color: #27131d;
     font-family: 'Playfair Display', sans-serif;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: 700;
     padding-bottom: 15px;
 }
-
-/*
-.btn-mixin {
-    background-color: #27131d;
-    font-family: 'Playfair Display', sans-serif;
-    color: white;
-} */
 
 .service-introduction {
     padding: 50px;
 }
 
+.section.salon-service-container {
+    padding-bottom: 15px;
+}
+
 .offer-description {
+    font-size: 20px;
     padding: 10px;
 }
 
-.salon-services-container {
-    background-color: #f9e4fa;
-    background-color: #f9e6ef;
-    background-color: #a8699b;
-    background-color: #b784ad;
-    background-color: #dedede;
+.salon-service-container {
+    background-color: #c9a2c9;
+  
+}
+
+
+/*.col-sm-4 #images {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin: 4px;
+    box-shadow: 10px 10px 5px grey;
+    text-align: center;
+    /* This section is an experiment from a codepen to overlay text on blurred images */
+    position: relative; */
+    
+}
+
+.col-sm-4 #images img {
+    width: 100%;
+    height: 100%;
+    transition: .5s all;
+    text-align: center;
+   
+}
+
+.overlay {
+    border-radius: 50%;
+    margin: 10px;
+} 
+
+.overlay:hover {
+    filter: blur(6px) brightness(50%);
+    background-color: #000;
+    opacity: 0.8;
+}
+
+.col-sm-4 p {
+    position: absolute;
+    left: 33%;
+    top: 50%;
+    visibility: hidden;
+    color: white;
+}
+
+
+
+
+
+/* img, .overlay { 
+    transition: .3s all;
+    border-radius: 3px; */
+    /* position: absolute;
+    top: 0;
+    left; 0;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    opacity: 0;
+    */
+
+}
+
+
+
+.accordion-container {
+    display: flex;
+    justify-content: center;
+    background-color: #c9a2c9;
+    height: 100%;
 }
 
 #accordion {
     display: flex;
     flex-direction: column;
-    background-color: white;
-    color: #27131d;
+    background-color: #c9a2c9;
     cursor: pointer;
-    padding: 10px 10px 10px 10px;
-    margin: 15px;
+    padding: 10px 10px;
+    margin: 5px;
     text-align: center;
+    justify-content: center;
     width: 100%;
     border: none;
     outline: none;
     transition: 0.4s;
-    font-size: 15px;
+    font-size: 20px;
     font-family: 'Playfair Display', sans-serif;
     color: #27131d;
     line-height: 10pt;
+    box-shadow: 10px;
+}
+
+a:hover {
+    color: #c9a2c9;
+    
+}
+
+a:focus {
+    color: #c9a2c9;
 }
 
 #accordion.active, .panel:hover {
@@ -128,6 +205,27 @@ html, body {
     justify-content: center;
     position: relative;
     display: inline;
+    background-color: #c9a2c9;
+    width: 100%;
+    height: 400px;
+}
+
+th {
+    text-indent: 15px;
+}
+
+td {
+    float: left;
+    text-indent: 45px;
+}
+
+.scents {
+    text-indent: 70px;
+}
+
+.price {
+    float: right;
+    margin-right: 200px;
 }
 
 .service-title {
@@ -156,8 +254,9 @@ html, body {
     
 }
 
-#accordion .ui-accordion-header-active {
-    color: #b784ad;;
+a {
+    color: #292b2c;
+    font-size: 20px;
     
 }
 
@@ -185,7 +284,7 @@ h3 {
 
 
 section {
-    padding-bottom: 50px;
+    
 }
 
 .col-sm-4 {
@@ -194,7 +293,7 @@ section {
 
 
 footer {
-    background-color: #b784ad;
+    background-color: #c9a2c9;
 }
 
 .fa.fa-facebook-square {
@@ -211,13 +310,21 @@ h6, p {
 
 h2 {
     font-family: 'Playfair Display', sans-serif;
-    color: #b784ad;
+    font-size: 40px;
+    color: #b784ad; 
     
 }
 
 h5 {
     font-family: 'Playfair Display', sans-serif;
+    font-size: 20px;
 }
 
+h5 a.mb-0 {
+    font-size: 20px;
+    
+}
 
-
+h2.salon-services-header {
+    color: #b784ad;
+}

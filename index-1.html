@@ -5,10 +5,10 @@
     <head>
     
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, iniotial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style-1.css">
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
         
         
@@ -24,10 +24,9 @@
     
     </head>
     
-    <body id="bootstrap-overrides">
+    <body>
         
-    
-        <header>
+         <header>
             
             <div class="container">
                 <nav>  
@@ -49,260 +48,444 @@
             </div>
             
         </header>
-            
+        
         <jumbotron>
             <div class="jumbotron jumbotron-fluid">
                 <div class="container d-flex p-2 justify-content-center">
                     <div class="d-flex flex-column align-items-center">
                             <h1 class="display-3">Lily Nail Salon</h1>
-                            <p class="lead">The salon for all your beauty needs</p>
+                            <!-- <p class="lead">The salon for all your beauty needs</p> -->
                     </div>
                 </div>
             </div>
         </jumbotron>
-
-            
-            <section class="service-introduction">
+        
+        <section class="service-introduction">
                 <div class="container d-flex p-2 justify-content-center">
                     <div class="d-flex flex-column align-items-center">
-                    <h2>What We Offer</h2>
+                    <h2>The salon for all your beauty needs</h2>
                     <p class="offer-description">We offer everything from simple nail care to delicious fragrant treatments inspired by the fruits of the tropics.  Lily Nail Salon provides a solution for healthy, natural-looking nails while embracing a calming atmosphere served with excellent care.</p>
                     </div>
                 </div>
                 
-                <div class="container-fluid d-flex p-2">
-                </div>
+            <div class="container-fluid d-flex p-2"></div>
+            
                     <div class="row justify-content-between">
-                    <div class="col-sm-4" align="center">
-                        <img src="Images/honey.jpg" width="400" height="300">    
+                    <div class="col-sm-4" id="images" align="center">
+                        <img id="honey" src="Images/honey.jpg" width="400" height="400" class="overlay"> 
+                        <p class="text">Milk & Honey Spa Package</p>
+                        </div>
+                    
+                        
+                    <div class="col-sm-4" id="images" align="center">
+                       <img src="Images/tangerinetwist.jpg" width="400" height="400" class="overlay"/>
+                        <p class="text">Tangerine Twist Package</p>
                     </div>
                         
-                    <div class="col-sm-4" align="center">
-                       <img src="Images/tangerinetwist.jpg" width="400" height="300">
+                    <div class="col-sm-4" id="images" align="center">
+                        <img src="Images/chocolate.jpg" width="400" height="400" class="overlay"/>
+                        <p class="text">Chocolate Spa Package</p>
                     </div>
-                        
-                    <div class="col-sm-4" align="center">
-                        <img src="Images/chocolate.jpg" width="600" height="300">
-                    </div>
-              </div>    
+              </div> 
+              <script>
+                 // Register mouseover/mouseout event listeners for verlay text for the three images
+                 $(document).ready(function() {
+                      $('.overlay').each(function() {
+                     var $el = $(this);
+                     $el.mouseover(function (){
+                        $el.siblings('.text').css('visibility', 'visible');
+                     });
+                      $el.mouseout(function() {
+                         $el.siblings('.text').css('visibility', 'hidden');
+                      });
+                  }); 
+                 });
+
+            </script>
+            
+            
             </section>
         
-        <section class="salon-services-container">
+       <!-- <section class="salon-service-container">
             <div class="container d-flex p-2 justify-content-center">
                 <div class="d-flex flex-column align-items-center">
-                    <h2>Salon Services</h2>
+                    <h2 class="salon-services-header"></h2>
                 </div>
             </div>
+        </section>  -->
         
-           <div id="accordion">
-              <h3>Nail Care</h3>
-              <div class="service-container">
-                <p class="service-title">Manicure</p>
-                    <div class="service-item">
-                        <p>Basic Manicure</p>
-                        <p>$15</p>
-                    </div>
-                  
-                    <div class="service-item">
-                        <p>French Manicure</p>
-                        <div class="starting-price">$20</div>
-                  </div>
-                  
-                    <p class="service-item">Gel Manicure</p>
-                        <div class="starting-price">$30</div>
-                    <p class="service-item">French Gel</p>
-                        <div class="starting-price">+$15</div>
-                          
-                  
-                  <p class="service-title">Pedicure</p>
-                    <p class="service-item">Basic Pedicure</p>
-                        <div class="starting-price">$25</div>
-                    <p class="service-item">Basic Pedicure Combo</p>
-                      <div class="starting-price">$35</div>
-                    <p class="service-item">Collagen Socks</p>
-                      <div class="starting-price">$25</div>
-                    <p class="service-item">Collagen Socks with Pedicure</p>
-                      <div class="starting-price">$35</div>
-                  
-                  
-                  <p class="service-title">Hot Stones Care</p>
-                    <p class="service-item">Hot Stones Manicure</p>
-                      <div class="starting-price">$25</div>
-                    <p class="service-item">Hot Stones Pedicure</p>
-                      <div class="starting-price">$50</div>
-                    <p class="service-item">Hot Stones Combo</p>
-                      <div class="starting-price">$75</div>
-                    
-                  
-                  <p class="service-title">Other Services</p>
-                    <p class="service-item">Polish change</p>
-                      <div class="starting-price">$8/10</div>
-                    <p class="service-item">French-style polish</p>
-                      <div class="starting-price">$10/12</div>
-                    <p class="service-item">Gel Polish</p>
-                    <div class="starting-price">$20</div>
-                    <p class="service-item">Nail trim or file</p>
-                      <div class="starting-price">$8</div>
-                    <p class="service-item">Take off</p>
-                      <div class="starting-price">$10</div>
-                
-              </div>
-                   
-              <h3>Nail Enhancements</h3>
-                <div class="service-container">
-                    <p class="service-title">Acrylics</p>
-                      <p class="service-item">Full Set</p>
-                        <div class="starting-price">$28</div>
-                      <p class="service-item">Fill-in</p>
-                        <div class="starting-price">$18</div>
-                      <p class="service-item">Fix</p>
-                        <div class="starting-price">$3+</div>
-                  
-                    <p class="service-title">Gel</p>
-                        <p class="service-item">Full Set</p>
-                      <div class="starting-price">$35</div>
-                        <p class="service-item">Fill-in</p>
-                      <div class="starting-price">$25</div>
-                        <p class="service-item">Fix</p>
-                      <div class="starting-price">$4+</div>
-                  
-                    <p class="service-title">Solar Nails</p>
-                        <p class="service-item">Full Set</p>
-                      <div class="starting-price">$45</div>
-                  
-                    <p class="service-title">Fill-in Solar Nails</p>
-                        <p class="service-item">Pink & white</p>
-                      <div class="starting-price">$30</div>
-                        <p class="service-item">Pink only</p>
-                      <div class="starting-price">$25</div>
-                        <p class="service-item">Fix</p>
-                      <div class="starting-price">$4+</div>
-                  
-                    <p class="service-title">Signature Nail System (SNS)</p>
-                        <p class="service-item">SNS Overlay</p>
-                            <div class="starting-price">$30</div>
-                        <p class="service-item">SNS Overlay Soak off</p>
-                            <div class="starting-price">+$5</div>
-                        <p class="service-item">SNS Overlay Add tips</p>
-                            <div class="starting-price">$40</div>
-                        <p class="service-item">SNS French Overlay</p>
-                            <div class="starting-price">$40</div>
-                        <p class="service-item">SNS French Tip</p>
-                            <div class="starting-price">$50</div>
-                        <p class="service-item">SNS Fill-in</p>
-                            <div class="starting-price">$35</div>
-                  
-              </div>
-        
-               
-              <h3>Specialty Manicures & Pedicures</h3>
-              <div class="service-container">
-                <p class="service-title">Natural Products</p>
-                    <p class="service-item">Smoothing Pedicure</p>
-                      <div class="starting-price">$35</div>
-                    <p class="service-item">Ice Dancer</p>
-                      <div class="starting-price">$45</div>
-                    <p class="service-item">Firewalker</p>
-                      <div class="starting-price">$55</div>
-                  
-                <p class="service-title">VOESH of New York</p>
-                    <p class="service-item">VOESH of NY Manicure</p>
-                      <div class="starting-price">$25</div>
-                    <p class="service-item">VOESH of NY Combo</p>
-                      <div class="starting-price">$60</div>
-                    <p class="service-item">Pick A Scent
-                        <div class="starting-price">$45</div>
-                          <p class="service-item-sub">Virgin Olive Sensation</p>
-                          <p class="service-item-sub">Tangerine Twist</p>
-                          <p class="service-item-sub">Ocean Refresh</p>
-                          <p class="service-item-sub">Lavender Relieve</p>
-                          <p class="service-item-sub">Green Tea</p>
-                          <p class="service-item-sub">Cucumber</p>
-                  
-                <p class="service-title">Milk & Honey</p>
-                    <p class="service-item">Milk & Honey Manicure</p>
-                      <div class="starting-price">$25</div>
-                    <p class="service-item">Milk & Honey Pedicure</p>
-                      <div class="starting-price">$55</div>
-                    <p class="service-item">Milk & Honey Combo</p>
-                      <div class="starting-price">$75</div>
-                  
-                <p class="service-title">Mango</p>
-                    <p class="service-item">Mango Manicure</p>
-                      <div class="starting-price">$25</div>
-                    <p class="service-item">Mago Pedicure</p>
-                      <div class="starting-price">$55</div>
-                    <p class="service-item">Mango Combo</p>
-                      <div class="starting-price">$75</div>
-                    <p class="service-item">Add Hot Stones</p>
-                      <div class="starting-price">+$15</div>
-                  
-                  <p class="service-title">Chocolate Spa</p>
-                    <p class="service-item">Chocolate Spa Manicure</p>
-                      <div class="starting-price">$30</div>
-                    <p class="service-item">Chocolate Spa Pedicure</p>
-                      <div class="starting-price">$60</div>
-                    <p class="service-item">Chocolate Spa Combo</p>
-                      <div class="starting-price">$80</div>
-                    <p class="service-item">Add Hot Stones</p>
-                        <div class="starting-price">+$15</div>
-              </div>
-                  
-              <h3>Waxing</h3>
-              <div class="service-container">
-                <p class="service-item">Eyebrows</p>
-                    <div class="starting-price">$10</div>
-                <p class="service-item">Lips</p>
-                    <div class="starting-price">$8</div>
-                <p class="service-item">Chin</p>
-                    <div class="starting-price">$8+</div>
-                <p class="service-item">Half Leg</p>
-                    <div class="starting-price">$30+</div>
-                <p class="service-item">Full Leg</p>
-                    <div class="starting-price">$50+</div>
-                <p class="service-item">Bikini</p>
-                    <div class="starting-price">$30+</div>
-                <p class="service-item">Brazilian</p>
-                    <div class="starting-price">$45+</div>
-                <p class="service-item">Underarm</p>
-                    <div class="starting-price">$16+</div>
-                <p class="service-item">Half Arm</p>
-                    <div class="starting-price">$18+</div>
-                <p class="service-item">Full Arm</p>
-                    <div class="starting-price">$30+</div>
-                <p class="service-item">Whole Face</p>
-                    <div class="starting-price">$30+</div>
-              </div>
-               
-               <h3>Threading</h3>
-               <div class="service-container">
-                <p class="service-item">Eyebrows</p>
-                    <div class="starting-price">$15</div>
-                <p class="service-item">Lips</p>
-                    <div class="starting-price">$10</div>
-                <p class="service-item">Chin</p>
-                    <div class="starting-price">$10+</div>
-                <p class="service-item">Tint & Wax</p>
-                    <div class="starting-price">$25</div>
-                        <p class="service-item-sub">Eyebrow Tint</p>
-                            <div class="starting-price">$20</div>
-            </div>
+        <section class="accordion-container">
+        <div id="accordion" role="tablist" class="container d-flex p-2 justify-content-center">
+            
+          <div class="card container d-flex p-2 justify-content-center">
+            <div class="card-header" role="tab" id="headingOne">
+              <h5 class="mb-0">
+                <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Nail Care
+                </a>
+              </h5>
         </div>
-        </section>
-        
-        
-        <script type="text/javascript">
-       
-                $("#accordion").accordion({active: false, collapsible: true});
-           
-        </script>
+
+        <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            <table class="table">
+            <tr>
+                <th>Manicure</th>
+                </tr>
+            <tr>
+                <td>Basic Manicure</td>
+                <td class="price">$15</td>
+                </tr>
+            <tr>
+                <td>French Manicure</td>
+                <td class="price">$20</td>
+                </tr>
+            <tr>    
+                <td>Gel Manicure</td>
+                <td class="price">$30</td>
+                </tr>
+            <tr>
+                <td>French Gel Manicure</td>
+                <td class="price">+$5</td>
+                </tr>
             
+              <tr>
+                  <th>Pedicure</th>
+                </tr>
+            <tr>
+                <td>Basic Pedicure</td>
+                <td class="price">$25</td>
+                </tr>
+            <tr>
+                <td>Basic Pedicure Combo</td>
+                <td class="price">$35</td>
+                </tr>
+            <tr>
+                <td>Collagen Socks</td>
+                <td class="price">$25</td>
+                </tr>
+            <tr>
+                <td>Collagen Socks with Pedicure</td>
+                <td class="price">$35</td>
+                </tr>
+            <tr>
+              <th>Polish</th>
+                </tr>
+            <tr>
+                <td>Gel Polish</td>
+                <td class="price">$20</td>
+            <tr>
+                <td>Take-Off</td>
+                <td class="price">$10</td>
+                </tr>
+        
+          <th>Other Services</th>
+            <tr>
+                <td>Polish Change</td>
+                <td class="price">$8-$10</td>
+            </tr>
+            <tr>
+                <td>French-Style Polish</td>  
+                <td class="price">$10-$12</td>
+            </tr>
+            <tr>
+                <td>Nail Trim or File</td>
+                <td class="price">$8</td>
+            </tr>
+                </table>
+          </div>
+        </div>
+      </div>
+      <div class="card container d-flex p-2 justify-content-center">
+        <div class="card-header" role="tab" id="headingTwo">
+          <h5 class="mb-0">
+            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Nail Enhancements
+            </a>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
+              <table class="table">
+                  <th>Gel</th>
+                  <tr>
+                    <td>Full Set</td>
+                    <td class="price">$35</td>
+                  </tr>
+                  <tr>
+                    <td>Fill-In</td>
+                    <td class="price">$25</td>
+                  </tr>
+                  <tr>
+                    <td>Fix</td>
+                    <td class="price">$4+</td>
+                  </tr>
+                  
+                  <th>Acrylics</th>
+                    <tr>
+                        <td>Full Set</td>
+                        <td class="price">$28</td>
+                    </tr>
+                    <tr>
+                        <td>Fill-In</td>
+                        <td class="price">$18</td>
+                    </tr>
+                  
+                  <th>Solar</th>
+                    <tr>
+                        <td>Full Set</td>
+                        <td class="price">$45</td>
+                    </tr>
+                  <th>Fill-In Solar Nails</th>
+                    <tr>
+                        <td>Pink & White</td>
+                        <td class="price">$30</td>
+                    </tr>
+                    <tr>
+                        <td>Pink Only</td>
+                        <td class="price">$25</td>
+                    </tr>
+                    <tr>
+                        <td>Fix</td>
+                        <td class="price">$4+</td>
+                    </tr>
+                  
+                  <th>Signature Nail System (SNS)</th>
+                    <tr>
+                        <td>SNS Overlay</td>
+                        <td class="price">$30</td>
+                    </tr>
+                    <tr>
+                        <td>SNS Overlay Soak Off</td>
+                        <td class="price">+$5</td>
+                    </tr>
+                    <tr>
+                        <td>SNS Overlay Plus Tips</td>
+                        <td class="price">$40</td>
+                    </tr>
+                    <tr>
+                        <td>SNS French Overlay</td>
+                        <td class="price">$40</td>
+                    </tr>
+                    <tr>
+                        <td>SNS French Tip</td>
+                        <td class="price">$50</td>
+                    </tr>
+                    <tr>
+                        <td>SNS Fill-In</td>
+                        <td class="price">$35</td>
+                    </tr>
             
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="card container d-flex p-2 justify-content-center">
+        <div class="card-header" role="tab" id="headingThree">
+          <h5 class="mb-0">
+            <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+             Specialty Manicures & Pedicures
+            </a>
+          </h5>
+        </div> 
+        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+              <table class="table">
+                  <th>VOESH of New York</th>
+                    <tr>
+                        <td>Pick A Scent Pedicure</td>
+                        <td class="price">$45</td>
+                    </tr>
+                    <tr>
+                        <td class="scents">Virgin Olive Sensation,
+                        Tangerine Twist,
+                        Ocean Refresh,</td>
+                        <td class="scents">
+                        Lavender Relieve,
+                        Lemon Quench,
+                        Green Tea,
+                        Cucumber</td>
+                    </tr>
+                    <tr>
+                        <td>VOESH of New York Manicure</td>
+                        <td class="price">$25</td>
+                    </tr>
+                    <tr>
+                        <td>VOESH of New York Combo</td>
+                        <td class="price">$60</td>
+                    </tr>
+                  <th>Milk & Honey</th>
+                    <tr>
+                        <td>Milk & Honey Manicure</td>
+                        <td class="price">$25</td>
+                    </tr>
+                    <tr>
+                        <td>Milk & Honey Pedicure</td>
+                        <td class="price">$55</td>
+                    </tr>
+                    <tr>
+                        <td>Milk & Honey Combo</td>
+                        <td class="price">$75</td>
+                    </tr>
+                  
+                  <th>Mango</th>
+                    <tr>
+                        <td>Mango Manicure</td>
+                        <td class="price">$25</td>
+                    </tr>
+                    <tr>
+                        <td>Mango Pedicure</td>
+                        <td class="price">$55</td>
+                    </tr>
+                    <tr>
+                        <td>Mango Combo</td>
+                        <td class="price">$75</td>
+                    </tr>
+                    <tr>
+                        <td>Additional Hot Stones</td>
+                        <td class="price">+$15</td>
+                    </tr>
+                  
+                  <th>Chocolate Spa</th>
+                    <tr>
+                        <td>Chocolate Spa Manicure</td>
+                        <td class="price">$30</td>
+                    </tr>
+                    <tr>
+                        <td>Chocolate Spa Pedicure</td>
+                        <td class="price">$60</td>
+                    </tr>
+                    <tr>
+                        <td>Chocolate Spa Combo</td>
+                        <td class="price">$80</td>
+                    </tr>
+                    <tr>
+                        <td>Additional Hot Stones</td>
+                        <td class="price">+$15</td>
+                    </tr>
+                  
+                  <th>Hot Stones Care</th>
+                    <tr>
+                        <td>Hot Stones Manicure</td>
+                        <td class="price">$25</td>
+                    </tr>
+                    <tr>
+                        <td>Hot Stones Pedicure</td>
+                        <td class="price">$50</td>
+                    </tr>
+                    <tr>
+                        <td>Hot Stones Combo</td>
+                        <td class="price">$75</td>
+                    </tr>
+                  
+                  <th>Natural Products</th>
+                    <tr>
+                        <td>Smoothing Pedicure</td>
+                        <td class="price">$35</td>
+                    </tr>
+                    <tr>
+                        <td>Ice Dancer</td>
+                        <td class="price">$45</td>
+                    </tr>
+                    <tr>
+                        <td>Firewalker</td>
+                        <td class="price">$55</td>
+                    </tr>
+              </table>
+          </div>
+        </div>
+      </div>
+      <div class="card container d-flex p-2 justify-content-center">
+        <div class="card-header" role="tab" id="headingFour">
+          <h5 class="mb-0">
+            <a class="collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Hair Removal
+            </a>
+          </h5>
+        </div>
+        <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+          <div class="card-body">
+            <table class="table">
+              <th>Waxing</th>
+                <tr>
+                    <td>Eyebrows</td>
+                    <td class="price">$10</td>
+                </tr>
+                <tr>
+                    <td>Lips</td>
+                    <td class="price">$8</td>
+                </tr>
+                <tr>
+                    <td>Chin</td>
+                    <td class="price">$8+</td>
+                </tr>
+                <tr>
+                    <td>Half Leg</td>
+                    <td class="price">$30+</td>
+                </tr>
+                <tr>
+                    <td>Full Leg</td>
+                    <td class="price">$50+</td>
+                </tr>
+                <tr>
+                    <td>Bikini</td>
+                    <td class="price">$30+</td>
+                </tr>
+                <tr>
+                    <td>Brazilian</td>
+                    <td class="price">$45+</td>
+                </tr>
+                <tr>
+                    <td>Underarm</td>
+                    <td class="price">$16+</td>
+                </tr>
+                <tr>
+                    <td>Half Arm</td>
+                    <td class="price">$18+</td>
+                </tr>
+                <tr>
+                    <td>Full Arm</td>
+                    <td class="price">$30+</td>
+                </tr>
+                <tr>
+                    <td>Whole Face</td>
+                    <td class="price">$30+</td>
+                </tr>
+                
+            <th>Threading & Tint</th>
+                <tr>
+                    <td>Eyebrows</td>
+                    <td class="price">$15</td>
+                </tr>
+                <tr>
+                    <td>Lips</td>
+                    <td class="price">$10</td>
+                </tr>
+                <tr>
+                    <td>Chin</td>
+                    <td class="price">$10+</td>
+                </tr>
+                <tr>
+                    <td>Eyebrow Tint</td>
+                    <td class="price">$20</td>
+                </tr>
+                <tr>
+                    <td>Tint & Wax</td>
+                    <td class="price">$25</td>
+                </tr>
+                
+              
+              </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>    
         
         <footer>
             <div class="container-fluid d-flex p-2">
                 </div>
-                    <div class="row justify-content-between">
+                    <div class="row justify-content-between" id="footer">
                     <div class="col-sm-4" align="center">
                       <h5>Services</h5>
                         <p>Spa</p>
@@ -312,15 +495,13 @@
                     <div class="col-sm-4" align="center">
                       <h5>Find Us Here</h5>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.1426856239173!2d-80.70219594906031!3d35.00313317437136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88542f3d80660c9d%3A0xb84f0fb3b86c7de0!2s5941+Monroe-Weddington+Rd%2C+Matthews%2C+NC+28104!5e0!3m2!1sen!2sus!4v1501615334184" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        
                     </div>
                     <div class="col-sm-4" align="center">
                       <h5>Contact</h5>
                         <p>704-821-0500</p>
-                        <p>5941 Weddington Monroe Rd</p>
-                        <p>Suite 105</p>
-                        <p>Matthews, NC 28104</p>
                         <p>lilyns89@yahoo.com</p>
+                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
                     </div>
               </div>    
         </footer>
