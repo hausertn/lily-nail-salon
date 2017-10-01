@@ -7,6 +7,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
+        <link rel="icon" href="Images/leaf-favicon.png">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="style-1.css">
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
@@ -32,16 +33,16 @@
                 <nav>  
                   <ul class="nav nav-pills nav-justified fixed-top">
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Spa</a>
+                        <a class="nav-link" href="#accordion">Spa</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Salon</a>
+                        <a class="nav-link" href="#accordion">Salon</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Specials</a>
+                        <a class="nav-link" href="#accordion">Specials</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Info</a>
+                        <a class="nav-link" href="#footer">Info</a>
                       </li>
                     </ul>
                 </nav>
@@ -63,27 +64,27 @@
         <section class="service-introduction">
                 <div class="container d-flex p-2 justify-content-center">
                     <div class="d-flex flex-column align-items-center">
-                    <h2>The salon for all your beauty needs</h2>
+                    <p class="description">The salon for all your beauty needs</p>
                     <p class="offer-description">We offer everything from simple nail care to delicious fragrant treatments inspired by the fruits of the tropics.  Lily Nail Salon provides a solution for healthy, natural-looking nails while embracing a calming atmosphere served with excellent care.</p>
                     </div>
                 </div>
                 
             <div class="container-fluid d-flex p-2"></div>
             
-                    <div class="row justify-content-between">
+            <div class="row justify-content-between">
                     <div class="col-sm-4" id="images" align="center">
                         <img id="honey" src="Images/honey.jpg" width="400" height="400" class="overlay"> 
                         <p class="text">Milk & Honey Spa Package</p>
                         </div>
                     
                         
-                    <div class="col-sm-4" id="images" align="center">
-                       <img src="Images/tangerinetwist.jpg" width="400" height="400" class="overlay"/>
+                    <div class="col-sm-4" id="images" text-align="center">
+                       <img src="Images/oranges.jpg" width="400" height="400" class="overlay"/>
                         <p class="text">Tangerine Twist Package</p>
                     </div>
                         
                     <div class="col-sm-4" id="images" align="center">
-                        <img src="Images/chocolate.jpg" width="400" height="400" class="overlay"/>
+                        <img src="Images/chocolate-brownie.jpg" width="400" height="400" class="overlay"/>
                         <p class="text">Chocolate Spa Package</p>
                     </div>
               </div> 
@@ -114,17 +115,17 @@
             </div>
         </section>  -->
         
-        <section class="accordion-container">
+    <section class="accordion-container">
         <div id="accordion" role="tablist" class="container d-flex p-2 justify-content-center">
             
           <div class="card container d-flex p-2 justify-content-center">
             <div class="card-header" role="tab" id="headingOne">
               <h5 class="mb-0">
-                <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fa fa-angle-down" aria-hidden="true"></i>
                   Nail Care
                 </a>
               </h5>
-        </div>
+            </div>
 
         <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body">
@@ -199,7 +200,7 @@
       <div class="card container d-flex p-2 justify-content-center">
         <div class="card-header" role="tab" id="headingTwo">
           <h5 class="mb-0">
-            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fa fa-angle-down" aria-hidden="true"></i>
               Nail Enhancements
             </a>
           </h5>
@@ -283,7 +284,7 @@
       <div class="card container d-flex p-2 justify-content-center">
         <div class="card-header" role="tab" id="headingThree">
           <h5 class="mb-0">
-            <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fa fa-angle-down" aria-hidden="true"></i>
              Specialty Manicures & Pedicures
             </a>
           </h5>
@@ -398,7 +399,7 @@
       <div class="card container d-flex p-2 justify-content-center">
         <div class="card-header" role="tab" id="headingFour">
           <h5 class="mb-0">
-            <a class="collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <a class="collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><i class="fa fa-angle-down" aria-hidden="true"></i>
               Hair Removal
             </a>
           </h5>
@@ -483,27 +484,27 @@
     </section>    
         
         <footer>
-            <div class="container-fluid d-flex p-2">
+            <div class="container-fluid d-flex p-2" id="footer">
                 </div>
                     <div class="row justify-content-between" id="footer">
-                    <div class="col-sm-4" align="center">
-                      <h5>Services</h5>
-                        <p>Spa</p>
-                        <p>Salon</p>
-                        <p>Specials</p>
+                    <div class="col-md-4" align="center">
+                      <h5><i class="fa fa-phone" aria-hidden="true" id="footer-icon"></i>Call</h5>
+                        <p class="footer-text">704-821-0500</p>
+                    
                     </div>
-                    <div class="col-sm-4" align="center">
-                      <h5>Find Us Here</h5>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.1426856239173!2d-80.70219594906031!3d35.00313317437136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88542f3d80660c9d%3A0xb84f0fb3b86c7de0!2s5941+Monroe-Weddington+Rd%2C+Matthews%2C+NC+28104!5e0!3m2!1sen!2sus!4v1501615334184" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <div class="col-md-4" align="center">
+                      <h5><i class="fa fa-map-marker" aria-hidden="true" id="footer-icon"></i>Visit</h5>
+                      <p class="footer-text">5941 Monroe-Weddington Road<br>Matthews, NC 28104</p>
+                        <a href="https://www.facebook.com/pages/Lily-Nails-Spa/159140164120849" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true" id="footer-icon"></i></a>
+                      <p class="copyright">&copy; Taylor Hauser</p>
+                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.1426856239173!2d-80.70219594906031!3d35.00313317437136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88542f3d80660c9d%3A0xb84f0fb3b86c7de0!2s5941+Monroe-Weddington+Rd%2C+Matthews%2C+NC+28104!5e0!3m2!1sen!2sus!4v1501615334184" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe> -->
                         
                     </div>
-                    <div class="col-sm-4" align="center">
-                      <h5>Contact</h5>
-                        <p>704-821-0500</p>
-                        <p>lilyns89@yahoo.com</p>
-                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                    <div class="col-md-4" align="center">
+                      <h5><i class="fa fa-envelope" aria-hidden="true" id="footer-icon"></i>Email</h5>
+                        <p class="footer-text">lilyns89@yahoo.com</p>
                     </div>
-              </div>    
+              </div>  
         </footer>
             
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>

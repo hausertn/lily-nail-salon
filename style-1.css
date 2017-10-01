@@ -63,7 +63,7 @@ html, body {
 .display-3 {
     color: #27131d;
     font-family: 'Sophia', serif;
-    font-size: 180px;
+    font-size: 200px;
     padding-bottom: -15px;
     font-weight: 500;
     
@@ -79,14 +79,20 @@ html, body {
 
 .service-introduction {
     padding: 50px;
+    padding-bottom: 100px;
 }
 
 .section.salon-service-container {
     padding-bottom: 15px;
 }
 
+.description {
+    font-size: 50px;
+    color: #c9a2c9;
+}
+
 .offer-description {
-    font-size: 20px;
+    font-size: 30px;
     padding: 10px;
 }
 
@@ -119,19 +125,23 @@ html, body {
 .overlay {
     border-radius: 50%;
     margin: 10px;
+    text-align: center;
 } 
 
 .overlay:hover {
     filter: blur(6px) brightness(50%);
     background-color: #000;
     opacity: 0.8;
+    text-align: center;
 }
+
 
 .col-sm-4 p {
     position: absolute;
-    left: 33%;
-    top: 50%;
+    left: 20%;
+    top: 45%;
     visibility: hidden;
+    font-size: 25px;
     color: white;
 }
 
@@ -158,17 +168,22 @@ html, body {
 .accordion-container {
     display: flex;
     justify-content: center;
-    background-color: #c9a2c9;
     height: 100%;
+    padding-bottom: 100px;
 }
+
+.p-2 {
+    padding-bottom: 100px;
+}
+
 
 #accordion {
     display: flex;
     flex-direction: column;
-    background-color: #c9a2c9;
     cursor: pointer;
     padding: 10px 10px;
     margin: 5px;
+    margin-bottom: 100px;
     text-align: center;
     justify-content: center;
     width: 100%;
@@ -180,11 +195,11 @@ html, body {
     color: #27131d;
     line-height: 10pt;
     box-shadow: 10px;
+    
 }
 
 a:hover {
-    color: #c9a2c9;
-    
+    color: #c9a2c9;  
 }
 
 a:focus {
@@ -195,28 +210,33 @@ a:focus {
     background-color: #ffffff;
 }
 
-#accordion .ui-icon {
-    display: none;
-}
-
 .service-container {
-    display: flex;
+    /*display: flex;*/
     flex-direction: row;
     justify-content: center;
     position: relative;
     display: inline;
     background-color: #c9a2c9;
-    width: 100%;
+    width: 80%;
     height: 400px;
 }
 
 th {
     text-indent: 15px;
+    border-top: 1px solid;
+}
+
+tr {
+    border-bottom: 1px solid #f5f5f5;
 }
 
 td {
     float: left;
     text-indent: 45px;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
 }
 
 .scents {
@@ -225,7 +245,7 @@ td {
 
 .price {
     float: right;
-    margin-right: 200px;
+    margin-right: 50px;
 }
 
 .service-title {
@@ -240,7 +260,6 @@ td {
 }
 
 
-
 #accordion .ui-accordion-content {
     display: none;
     text-align: left;
@@ -250,14 +269,20 @@ td {
     margin: 0;
     font-size: 25px;
     border-color: #27131d;
-    background-color: #ffffff;
+    background-color: #fff;
     
 }
 
 a {
-    color: #292b2c;
-    font-size: 20px;
+    color: #b784ad;
+    font-size: 35px;
     
+}
+
+.fa.fa-angle-down {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 
@@ -283,8 +308,8 @@ h3 {
 }
 
 
-section {
-    
+.footer {
+    margin-top: 50px;
 }
 
 .col-sm-4 {
@@ -292,13 +317,16 @@ section {
 }
 
 
-footer {
-    background-color: #c9a2c9;
+#footer {
+    background-image: url("Images/salt-flats.jpg");
+    background-size: cover;
 }
 
 .fa.fa-facebook-square {
-    font-size: 40px;
+    font-size: 50px;
     display: block;
+    color: white;
+    margin-top: 70px;
 }
 
 
@@ -317,14 +345,34 @@ h2 {
 
 h5 {
     font-family: 'Playfair Display', sans-serif;
-    font-size: 20px;
+    font-size: 45px;
+    color: #fff;
 }
 
 h5 a.mb-0 {
-    font-size: 20px;
-    
+    font-size: 45px;
+    margin-bottom: 30px;  
 }
 
 h2.salon-services-header {
     color: #b784ad;
+}
+
+.footer-text {
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+}
+
+#footer-icon {
+    padding-right: 5px;
+    color: #fff;
+}
+
+.copyright {
+    font-size: 20px;
+    font-weight: 300px;
+    color: white;
+    margin-top: 70px;
+    margin-bottom: 5px;
 }
